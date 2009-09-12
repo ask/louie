@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>About &mdash; Louie v1.1 documentation</title>
+    <link rel="stylesheet" href="static/default.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.1',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="" />
+    <link rel="top" title="Louie v1.1 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="index.html">Louie v1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="about">
+<h1>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
+<p>Louie is based on <a class="reference" href="http://pydispatcher.sf.net/">PyDispatcher</a>.  Here is a very good detailed
+description of what both PyDispatcher and Louie offer you, based on
+the description available at the PyDispatcher website.</p>
+<p>PyDispatcher provides a multiple-producer-multiple-consumer
+signal-registration and routing infrastructure, suitable for use in
+multiple contexts.</p>
+<p>The dispatcher mechanism is particularly useful when constructing
+Model-View-Controller style applications where it is not desirable to
+have the Model objects aware of the event model.</p>
+<p>To be more concrete about what PyDispatcher does for you, here are
+some specifics:</p>
+<ul class="simple">
+<li>A centralized service delivers messages to registered objects in the
+local process.  You can register any number of functions or other
+callable objects which can receive signals from senders.<ul>
+<li>Registration can be for any sender, particular sending objects, or
+&#8220;anonymous&#8221; messages (messages where the sender is None).</li>
+<li>Registration can be for all signals, or particular signals.</li>
+<li>A single signal will be delivered to all appropriate registered
+receivers, so that multiple registrations do not interfere with
+each other.</li>
+<li>The sender or receiver need not be be dispatcher-aware.  Any
+Python object, except for <cite>None</cite>, can act as a sender, and any
+callable object can act as a receiver.</li>
+<li>The system uses weak references to receivers wherever possible.</li>
+<li>Object lifetimes are not affected by PyDispatcher registrations.
+When your object goes away, the registrations related to the
+object also go away.</li>
+<li>References to common transient objects (instance methods in
+particular) are stored as compound weak references.</li>
+<li>Weak references can be disabled on a registration-by-registration
+basis.</li>
+</ul>
+</li>
+<li>It allows rich signal types. Signals must simply be hashable
+objects; they are otherwise opaque to the dispatch mechanism.</li>
+<li>Positional and keyword arguments may be attached to a signal when
+sending.  For each receiver, PyDispatcher sends each receiver the
+arguments that they expect; other arguments are silently dropped.
+Thus, receivers can be general in nature, even ignoring all
+arguments, or they can be specific, accepting whichever arguments it
+needs.</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="sources/about.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="index.html">Louie v1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009, Patrick K. O&#39;Brien and contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.3.
+    </div>
+  </body>
+</html>

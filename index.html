@@ -19,7 +19,9 @@
     </script>
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
-    <link rel="top" title="Louie v1.1 documentation" href="" /> 
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="Louie v1.1 documentation" href="" />
+    <link rel="next" title="About" href="about.html" /> 
   </head>
   <body>
     <div class="related">
@@ -28,6 +30,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="about.html" title="About"
+             accesskey="N">next</a> |</li>
         <li><a href="">Louie v1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
@@ -40,8 +45,66 @@
   <div class="section" id="welcome-to-louie-s-documentation">
 <h1>Welcome to Louie&#8217;s documentation!<a class="headerlink" href="#welcome-to-louie-s-documentation" title="Permalink to this headline">¶</a></h1>
 <p>Contents:</p>
-<ul class="simple">
+<ul>
+<li class="toctree-l1"><a class="reference" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference" href="changes.html">Changes</a><ul>
+<li class="toctree-l2"><a class="reference" href="changes.html#changes-from-pydispatcher-to-louie-1-0">Changes from PyDispatcher to Louie 1.0</a></li>
 </ul>
+</li>
+<li class="toctree-l1"><a class="reference" href="contributors.html">Contributors</a></li>
+</ul>
+<p>Louie provides Python programmers with a straightforward way to
+dispatch signals between objects in a wide variety of contexts. It is
+based on <a class="reference" href="http://pydispatcher.sf.net/">PyDispatcher</a>, which in turn was based on a highly-rated
+<a class="reference" href="http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/87056">recipe</a> in the Python Cookbook.</p>
+<p>Louie is licensed under <a class="reference" href="http://opensource.org/licenses/bsd-license.php">The BSD License</a>.</p>
+</div>
+<div class="section" id="louie-requirements">
+<h1>Louie Requirements<a class="headerlink" href="#louie-requirements" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Python 2.3 or higher.</li>
+</ul>
+</div>
+<div class="section" id="installing-louie">
+<h1>Installing Louie<a class="headerlink" href="#installing-louie" title="Permalink to this headline">¶</a></h1>
+<p>Louie uses <a class="reference" href="http://peak.telecommunity.com/DevCenter/EasyInstall">easy_install</a> for installation, and is distributed via
+the <a class="reference" href="http://cheeseshop.python.org/pypi/Louie">Python Cheese Shop</a>.</p>
+<p>If you already have <cite>easy_install</cite>, run this command:</p>
+<div class="highlight-python"><pre>easy_install Louie</pre>
+</div>
+<p>If that failed, you do not have <cite>easy_install</cite>.  To install that,
+download <a class="reference" href="http://peak.telecommunity.com/dist/ez_setup.py">ez_setup.py</a>, then run this command:</p>
+<div class="highlight-python"><pre>python ez_setup.py setuptools</pre>
+</div>
+<p>Then, run the <cite>easy_install</cite> command given above again.</p>
+</div>
+<div class="section" id="upgrading-louie">
+<h1>Upgrading Louie<a class="headerlink" href="#upgrading-louie" title="Permalink to this headline">¶</a></h1>
+<p>Run this command to upgrade Louie to the latest release:</p>
+<div class="highlight-python"><pre>easy_install -U Louie</pre>
+</div>
+</div>
+<div class="section" id="development">
+<h1>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h1>
+<p>You can track the latest changes in Louie using the Subversion
+repository or using regularly-built snapshots.</p>
+<div class="section" id="using-easy-install">
+<h2>Using easy_install<a class="headerlink" href="#using-easy-install" title="Permalink to this headline">¶</a></h2>
+<p>Provided you already have <cite>easy_install</cite>, run this command:</p>
+<div class="highlight-python"><pre>easy_install -f http://louie.berlios.de/dist/ Louie</pre>
+</div>
+</div>
+<div class="section" id="using-subversion">
+<h2>Using Subversion<a class="headerlink" href="#using-subversion" title="Permalink to this headline">¶</a></h2>
+<p>Check out the Louie trunk as per the <a class="reference" href="http://developer.berlios.de/svn/?group_id=5432">Berlios usage information</a>.</p>
+<p>Run this command inside your checkout path:</p>
+<div class="highlight-python"><pre>python setup.py install</pre>
+</div>
+<p>Alternatively, you may use Louie directly from your checkout path
+using this command:</p>
+<div class="highlight-python"><pre>python setup.py develop</pre>
+</div>
+</div>
 </div>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
@@ -63,9 +126,20 @@
 <li><a class="reference" href="">Welcome to Louie&#8217;s documentation!</a><ul>
 </ul>
 </li>
+<li><a class="reference" href="#louie-requirements">Louie Requirements</a></li>
+<li><a class="reference" href="#installing-louie">Installing Louie</a></li>
+<li><a class="reference" href="#upgrading-louie">Upgrading Louie</a></li>
+<li><a class="reference" href="#development">Development</a><ul>
+<li><a class="reference" href="#using-easy-install">Using easy_install</a></li>
+<li><a class="reference" href="#using-subversion">Using Subversion</a></li>
+</ul>
+</li>
 <li><a class="reference" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 
+            <h4>Next topic</h4>
+            <p class="topless"><a href="about.html"
+                                  title="next chapter">About</a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
               <li><a href="sources/index.txt"
@@ -94,6 +168,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="about.html" title="About"
+             >next</a> |</li>
         <li><a href="">Louie v1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
