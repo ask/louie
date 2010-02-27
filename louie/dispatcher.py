@@ -38,6 +38,9 @@ from louie import saferef
 from louie.sender import Any, Anonymous
 from louie.signal import All
 
+# new-style
+from louie.signal import Signal
+
 
 # Support for statistics.
 if __debug__:
