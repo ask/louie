@@ -24,9 +24,9 @@ def safe_ref(target, on_delete=None):
     if getattr(target, "im_self", None) is not None:
         # Turn a bound method into a BoundMethodWeakref instance.
         # Keep track of these instances for lookup by disconnect().
-        assert (hasattr(target, 'im_func'),
-            """safe_ref target %r has im_self, but no im_func, "
-            "don't know how to create reference""" % (target, ))
+        assert hasattr(target, 'im_func'), \
+            """safe_ref target %r has im_self, but no im_func, " \
+            "don't know how to create reference""" % (target, )
         return get_bound_method_weakref(target=target,
                                         on_delete=on_delete)
     if callable(on_delete):
@@ -232,9 +232,9 @@ class BoundNonDescriptorMethodWeakref(BoundMethodWeakref):
             which will be passed a pointer to this object.
 
         """
-        assert (getattr(target.im_self, target.__name__) == target,
+        assert getattr(target.im_self, target.__name__) == target, \
                "method %s isn't available as the attribute %s of %s" % (
-                    target, target.__name__, target.im_self))
+                    target, target.__name__, target.im_self)
         super(BoundNonDescriptorMethodWeakref, self).__init__(target,
                                                               on_delete)
 

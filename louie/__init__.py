@@ -1,3 +1,5 @@
+"""Signal dispatching mechanism"""
+
 __all__ = [
     'dispatcher',
     'error',
@@ -44,3 +46,7 @@ from louie.plugin import \
 from louie.sender import Anonymous, Any
 
 from louie.signal import All, Signal
+
+
+from louie.version import __version__, __author__, __contact__, __homepage__
+from louie.version import __docformat__

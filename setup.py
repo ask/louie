@@ -1,33 +1,33 @@
-from setuptools import setup, find_packages
+import os
+import codecs
 import textwrap
+try:
+    from setuptools import setup, find_packages
+except ImportError:
+    from ez_setup import use_setuptools
+    use_setuptools()
+    from setuptools import setup, find_packages
 
 try:
     import buildutils
 except ImportError:
     pass
 
-from louie import version
+import louie
+
+if os.path.exists("README.rst"):
+    long_description = codecs.open("README.rst", "r", "utf-8").read()
+else:
+    long_description = "See http://pypi.python.org/pypi/Louie"
 
 setup(
-    name=version.NAME,
+    name="Louie",
 
-    version=version.VERSION,
+    version=louie.__version__,
 
-    description=version.DESCRIPTION,
+    description=louie.__doc__,
 
-    long_description=textwrap.dedent("""
-    Louie provides Python programmers with a straightforward way to dispatch
-    signals between objects in a wide variety of contexts. It is based on
-    PyDispatcher_, which in turn was based on a highly-rated recipe_ in the
-    Python Cookbook.
-
-    You can also get the `latest development version
-    <http://getschevo.org/hg/repos.cgi/louie-dev/archive/tip.tar.gz#egg=Louie-dev>`__.
-
-    .. _PyDispatcher: http://pydispatcher.sf.net/
-
-    .. _recipe: http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/87056
-    """),
+    long_description=textwrap.dedent(long_description),
 
     classifiers=[
     'Intended Audience :: Developers',
@@ -35,32 +35,18 @@ setup(
     'Programming Language :: Python',
     'Topic :: Software Development :: Libraries :: Python Modules',
     ],
-
     keywords='',
-
-    author="Patrick K. O'Brien and contributors",
-
-    author_email='louie-users@lists.berlios.de',
-
-    url='http://louie.berlios.de/',
-
-    download_url='http://cheeseshop.python.org/pypi/Louie',
-
+    author=louie.__author__,
+    author_email=louie.__contact__,
+    url=louie.__homepage__,
     license='BSD',
-
     packages=find_packages(exclude=['doc', 'ez_setup', 'examples', 'tests']),
-
     install_requires=[
     'nose >= 0.10.1',
     ],
-
     zip_safe=False,
-
     package_data={
     # -*- package_data: -*-
     },
-
     test_suite = 'nose.collector',
-
-    )
-      
+)
